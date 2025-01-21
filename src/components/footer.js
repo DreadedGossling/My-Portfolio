@@ -7,7 +7,7 @@ import { FaGithub } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className='bg-white'>
-      <div className='flex justify-center space-x-4 md:space-x-20 p-8'>
+      <div className='flex justify-center space-x-4 md:space-x-20 p-4 md:p-8'>
         <a href="https://www.instagram.com/_sharma_r.k/" target='_blank' rel='noreferrer'>
           <FaInstagram className='md:size-8 hover:text-cyan-800 transition ease-in duration-300 cursor-pointer' />
         </a>
@@ -21,7 +21,7 @@ const Footer = () => {
           <FaGithub className='md:size-8 hover:text-cyan-800 transition ease-in duration-300 cursor-pointer' />
         </a>
       </div>
-      <footer className="p-4 text-center">
+      <footer className="p-2 md:p-4 text-center">
         <p>&copy; {new Date().getFullYear()} Portfolio</p>
       </footer>
     </div>

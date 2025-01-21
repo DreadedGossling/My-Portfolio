@@ -48,24 +48,24 @@ const projects = [
 
 const Projects = () => (
   <motion.section
-    className="px-4 -my-4"
+    className="px-4 -my-16 md:-my-4"
     initial={{ x: "-100vw" }}
     animate={{ x: 0 }}
     transition={{ duration: 1 }}
   >
     <div className="text-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center font-mono">Projects</h2>
-        <p className="text-center text-xl mb-14 md:mb-20">
+        <h2 className="text-2xl md:text-4xl font-bold text-center font-mono">Projects</h2>
+        <p className="text-center md:text-xl mb-10 md:mb-20">
           <span className="text-cyan-500 text-2xl font-bold">— </span>
           Created By Me
           <span className="text-cyan-500 text-2xl font-bold"> —</span>
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:py-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 md:py-6">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-stone-900 shadow-lg rounded-lg p-8 outline outline-1 outline-cyan-800
+              className="bg-stone-900 shadow-lg rounded-lg p-4 md:p-8 outline outline-1 outline-cyan-800
               hover:scale-105 transition-transform duration-300"
             >
               <div className="flex items-center justify-center mb-4">
@@ -73,11 +73,11 @@ const Projects = () => (
                   <i className={project.icon}></i>
                 </span>
               </div>
-              <h3 className="text-2xl font-serif font-semibold outline outline-1 outline-cyan-800 mb-4 
+              <h3 className="text-xl md:text-2xl font-serif font-semibold outline outline-1 outline-cyan-800 mb-4 
               p-2 text-center ">
                 {project.title}
               </h3>
-              <p className="text-justify text-lg capitalize">{project.description}</p>
+              <p className="text-justify md:text-lg capitalize">{project.description}</p>
             </div>
           ))}
         </div>

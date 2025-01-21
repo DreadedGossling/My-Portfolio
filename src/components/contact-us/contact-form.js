@@ -50,7 +50,7 @@ const ContactForm = () => {
   return (
     <div className="bg-stone-900 shadow-lg rounded-lg p-8 font-serif
               outline outline-1 outline-cyan-800">
-      <h3 className="text-2xl font-bold mb-4 text-white">Message Me</h3>
+      <h3 className="text-lg md:text-2xl font-bold mb-4 text-white">Message Me</h3>
       <form onSubmit={handleSubmit} className='text-black'>
         <input
           type="text"
@@ -59,7 +59,7 @@ const ContactForm = () => {
           value={formData.name}
           onChange={handleChange}
           required
-          className="border border-gray-300 p-3 w-full rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none mb-4"
+          className="border border-gray-300 p-1 md:p-3 w-full rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none mb-2 md:mb-4"
         />
         <input
           type="email"
@@ -68,7 +68,7 @@ const ContactForm = () => {
           value={formData.email}
           onChange={handleChange}
           required
-          className="border border-gray-300 p-3 w-full rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none mb-4"
+          className="border border-gray-300 p-1 md:p-3 w-full rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none mb-2 md:mb-4"
         />
         <input
           type="text"
@@ -77,7 +77,7 @@ const ContactForm = () => {
           value={formData.subject}
           onChange={handleChange}
           required
-          className="border border-gray-300 p-3 w-full rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none mb-4"
+          className="border border-gray-300 p-1 md:p-3 w-full rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none mb-2 md:mb-4"
         />
         <textarea
           placeholder="Message..."
@@ -86,17 +86,17 @@ const ContactForm = () => {
           value={formData.message}
           onChange={handleChange}
           required
-          className="border border-gray-300 p-3 w-full rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none mb-4"
+          className="border border-gray-300 p-1 md:p-3 w-full rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none mb-2 md:mb-4"
         ></textarea>
         <div className="flex justify-start">
           <button type='submit'
-            className="p-3 text-white bg-cyan-800 hover:bg-cyan-900">
+            className="p-2 md:p-3 text-white bg-cyan-800 hover:bg-cyan-900">
             Send Message
           </button>
         </div>
       </form>
       {isSuccess && (
-        <p className="text-green-500 text-center mt-4">
+        <p className="text-green-500 text-center mt-2 md:mt-4">
           Your message has been sent successfully!
         </p>
       )}
