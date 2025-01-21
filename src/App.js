@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import About from "./components/about.js";
+import Projects from "./components/projects.js";
+import Skills from "./components/skills.js";
+import Contact from "./components/contact.js";
+import Navbar from "./components/navbar.js";
+import ScrollToTop from "./components/scrollToTop.js";
+import Footer from "./components/footer.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+    className="bg-cover bg-center py-0 bg-fixed"
+    style={{
+      backgroundImage: "url('./shubham-dhage-v0VjjYYFjOg-unsplash.jpg')",backgroundSize: 'auto'
+    }}
+  >
+      <Navbar />
+      <main>
+        <section id="about">
+          <About />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="skills">
+          <Skills />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
+      </main>
+      <Footer/>
+      <ScrollToTop />
     </div>
   );
 }
