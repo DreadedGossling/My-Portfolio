@@ -4,7 +4,7 @@ import ContactForm from "./contact-us/contact-form";
 
 const Contact = () => {
   return (
-    <div className="text-white -mt-16 md:mt-0">
+    <div className="pt-6 md:pt-12 text-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <h2 className="text-2xl md:text-4xl font-bold text-center font-mono">Contact</h2>
         <p className="text-center md:text-xl mb-10 md:mb-20">

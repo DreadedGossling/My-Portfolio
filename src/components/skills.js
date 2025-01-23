@@ -3,12 +3,13 @@ import { motion } from "framer-motion";
 
 const skills = ["React.js", "Next.js", "Vue.js", "Nuxt.js", "JavaScript",
   "Tailwind CSS", "Node.js", "Git", "Jira", "Vuetify", "Firebase", "Express.js",
-  "Firestore", "Mongo Db", "Material UI", "Postman", "Strapi", "Cloudflare","Vercel"
+  "Firestore", "Mongo Db", "Material UI", "Postman", "Strapi", "Cloudflare","Vercel",
+  "Netlify"
 ];
 
 const Skills = () => (
   <motion.section
-    className="py-32 px-4 text-center"
+    className="px-4 py-6 md:py-12 text-center"
     initial={{ scale: 0 }}
     animate={{ scale: 1 }}
     transition={{ duration: 1 }}

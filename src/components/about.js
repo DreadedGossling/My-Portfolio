@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const About = () => (
   <motion.section
-    className="py-24 md:py-32 px-4 text-center"
+    className="px-4 pb-6 md:pb-12 text-center"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     transition={{ duration: 1 }}

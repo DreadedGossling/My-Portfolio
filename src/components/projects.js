@@ -48,7 +48,7 @@ const projects = [
 
 const Projects = () => (
   <motion.section
-    className="px-4 -my-16 md:-my-4"
+    className="px-4 py-6 md:py-12"
     initial={{ x: "-100vw" }}
     animate={{ x: 0 }}
     transition={{ duration: 1 }}

@@ -26,7 +26,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
         <div className="flex justify-between items-center h-20 font-serif">
           <div className="flex-shrink-0">
-            <a href="#about" className="text-2xl md:text-3xl font-bold">
+            <a href="#intro" className="text-2xl md:text-3xl font-bold">
               My Portfolio
             </a>
           </div>
@@ -44,7 +44,7 @@ const Navbar = () => {
               Contact
             </a>
           </div>
-          <div className="md:hidden">
+          <div className="md:hidden z-50">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-white focus:outline-none"
@@ -77,8 +77,11 @@ const Navbar = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden h-screen flex justify-center bg-cyan-800 text-white text-center">
-          <div className="space-y-12 pt-[30%]">
+        <div
+          className={`z-0 fixed h-screen top-0 w-full flex justify-center items-center bg-cyan-800 text-white text-center transform ${isOpen ? "translate-y-0" : "-translate-y-full"
+            } transition-transform duration-300 ease-in-out`}
+        >
+          <div className="space-y-12">
             <a
               href="#about"
               className="block px-4 py-2 hover:font-bold"

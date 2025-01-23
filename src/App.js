@@ -6,17 +6,20 @@ import Contact from "./components/contact.js";
 import Navbar from "./components/navbar.js";
 import ScrollToTop from "./components/scrollToTop.js";
 import Footer from "./components/footer.js";
+import Introduction from "./components/introduction.js";
 
 function App() {
   return (
-    <div
-    className="bg-cover bg-center py-0 bg-fixed"
+    <div className="bg-cover bg-center bg-fixed"
     style={{
-      backgroundImage: "url('./shubham-dhage-v0VjjYYFjOg-unsplash.jpg')",backgroundSize: 'auto'
+      backgroundImage: "url('./shubham-dhage-v0VjjYYFjOg-unsplash.jpg')", backgroundSize: 'auto'
     }}
-  >
+    >
       <Navbar />
       <main>
+        <section id="intro">
+          <Introduction />
+        </section>
         <section id="about">
           <About />
         </section>
@@ -30,7 +33,7 @@ function App() {
           <Contact />
         </section>
       </main>
-      <Footer/>
+      <Footer />
       <ScrollToTop />
     </div>
   );
