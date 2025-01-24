@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-const projects = [
+const projectList = [
   {
     title: "Michigan Care Angels",
     description:
@@ -46,44 +46,70 @@ const projects = [
   },
 ];
 
-const Projects = () => (
-  <motion.section
-    className="px-4 py-6 md:py-12"
-    initial={{ x: "-100vw" }}
-    animate={{ x: 0 }}
-    transition={{ duration: 1 }}
-  >
-    <div className="text-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <h2 className="text-2xl md:text-4xl font-bold text-center font-mono">Projects</h2>
-        <p className="text-center md:text-xl mb-10 md:mb-20">
-          <span className="text-cyan-500 text-2xl font-bold">— </span>
-          Created By Me
-          <span className="text-cyan-500 text-2xl font-bold"> —</span>
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 md:py-6">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-stone-900 shadow-lg rounded-lg p-4 md:p-8 outline outline-1 outline-cyan-800
-              hover:scale-105 transition-transform duration-300"
-            >
-              <div className="flex items-center justify-center mb-4">
-                <span className=" text-4xl">
-                  <i className={project.icon}></i>
-                </span>
+const Projects = () => {
+  const [expandedProject, setExpandedProject] = useState(null); // Store the ID of the currently expanded project
+
+  const toggleExpand = (index) => {
+    setExpandedProject((prevIndex) => (prevIndex === index ? null : index));
+  };
+
+  return (
+    <motion.section
+      className="px-4 py-6 md:py-12"
+      initial={{ x: "-100vw" }}
+      animate={{ x: 0 }}
+      transition={{ duration: 1 }}
+    >
+      <div className="text-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <h2 className="text-2xl md:text-4xl font-bold text-center font-mono">Projects</h2>
+          <p className="text-center md:text-xl mb-10 md:mb-20">
+            <span className="text-cyan-500 text-2xl font-bold">— </span>
+            Created By Me
+            <span className="text-cyan-500 text-2xl font-bold"> —</span>
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 md:py-6">
+            {projectList.map((project, index) => (
+              <div
+                key={index}
+                className="bg-stone-900 shadow-lg rounded-lg p-4 md:p-8 outline outline-1 outline-cyan-800
+                hover:md:scale-105 hover:bg-cyan-800 transition-transform duration-300 group"
+              >
+                <div className="flex items-center justify-center mb-4">
+                  <span className=" text-4xl">
+                    <i className={project.icon}></i>
+                  </span>
+                </div>
+                <h3 className="text-xl md:text-2xl font-serif font-semibold outline outline-1 outline-cyan-800 mb-4 
+                  p-2 text-center group-hover:outline-white">
+                  {project.title}
+                </h3>
+                <div className="sm:hidden">
+                  <p className="text-justify">
+                    {expandedProject === index
+                      ? project.description
+                      : `${project.description.slice(0, 200)} ...`}
+                  </p>
+                  <div className="w-full relative h-8">
+                    <button
+                      onClick={() => toggleExpand(index)}
+                      className="absolute bottom-0 left-0 font-mono text-cyan-600 rounded group-hover:underline group-hover:text-white font-bold"
+                    >
+                      {expandedProject === index ? "See Less" : "Read More"}
+                    </button>
+                  </div>
+                </div>
+                <div className="hidden sm:block text-justify md:text-lg capitalize">
+                  {project.description}
+                </div>
+
               </div>
-              <h3 className="text-xl md:text-2xl font-serif font-semibold outline outline-1 outline-cyan-800 mb-4 
-              p-2 text-center ">
-                {project.title}
-              </h3>
-              <p className="text-justify md:text-lg capitalize">{project.description}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-  </motion.section>
-);
+    </motion.section>
+  )
+};
 
 export default Projects;
