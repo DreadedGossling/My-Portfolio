@@ -30,17 +30,25 @@ const Navbar = () => {
               My Portfolio
             </a>
           </div>
-          <div className="hidden md:flex space-x-4 text-xl">
-            <a href="#about" className="hover:scale-105">
+          <div className="hidden md:flex space-x-4 lg:space-x-6 text-xl">
+            <a href="#about" className="relative text-xl w-fit block after:block after:content-[''] 
+              after:absolute after:h-[3px] after:bg-white after:w-full after:scale-x-0 
+              after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
               About
             </a>
-            <a href="#projects" className="hover:scale-105 ">
+            <a href="#projects" className="relative text-xl w-fit block after:block after:content-[''] 
+              after:absolute after:h-[3px] after:bg-white after:w-full after:scale-x-0 
+              after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
               Projects
             </a>
-            <a href="#skills" className="hover:scale-105 ">
+            <a href="#skills" className="relative text-xl w-fit block after:block after:content-[''] 
+              after:absolute after:h-[3px] after:bg-white after:w-full after:scale-x-0 
+              after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
               Skills
             </a>
-            <a href="#contact" className=" hover:scale-105 ">
+            <a href="#contact" className="relative text-xl w-fit block after:block after:content-[''] 
+              after:absolute after:h-[3px] after:bg-white after:w-full after:scale-x-0 
+              after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
               Contact
             </a>
           </div>
