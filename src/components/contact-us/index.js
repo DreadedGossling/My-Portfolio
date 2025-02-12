@@ -1,6 +1,6 @@
 import React from "react";
-import ContactDetails from "./contact-us/contact-details";
-import ContactForm from "./contact-us/contact-form";
+import ContactDetails from "./contact-details";
+import ContactForm from "./contact-form";
 
 const Contact = () => {
   return (

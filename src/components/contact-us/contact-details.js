@@ -13,22 +13,26 @@ const contactDetails = () => {
         <li className="flex items-center space-x-3 md:space-x-6">
           <i className="text-xl md:text-3xl"><FaUser /></i>
           <div>
-            <h3 className="md:text-lg">Name</h3>
-            <h1 className="font-semibold md:text-lg">Ravi Kumar Sharma</h1>
+            <h3 className="font-semibold md:text-lg">Name</h3>
+            <h1 className="text-sm md:text-md">Ravi Kumar Sharma</h1>
           </div>
         </li>
         <li className="flex items-center space-x-3 md:space-x-6">
           <i className="text-xl md:text-3xl"><MdEmail /></i>
           <div>
-            <h3 className="md:text-lg">Email</h3>
-            <h1 className="font-semibold md:text-lg">ravirockskkr@gmail.com / ravisharma8gec@gmail.com</h1>
+            <h3 className="font-semibold md:text-lg">Email</h3>
+            <h1 className="text-sm md:text-md">
+              <a href="mailto:ravirockskkr@gmail.com">ravirockskkr@gmail.com</a>
+              {' / '}
+              <a href="mailto:ravisharma8gec@gmail.com">ravisharma8gec@gmail.com</a>
+            </h1>
           </div>
         </li>
         <li className="flex items-center space-x-3 md:space-x-6">
           <i className="text-xl md:text-3xl"><FaLocationDot /></i>
           <div>
-            <h3 className="md:text-lg">Address</h3>
-            <h1 className="font-semibold md:text-lg">Bengaluru, Karnataka</h1>
+            <h3 className="font-semibold md:text-lg">Address</h3>
+            <h1 className="text-sm md:text-md">Bengaluru, Karnataka</h1>
           </div>
         </li>
       </ul>

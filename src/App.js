@@ -1,8 +1,8 @@
 import React from "react";
 import About from "./components/about.js";
-import Projects from "./components/projects.js";
+import Projects from "./components/projects/index.js";
 import Skills from "./components/skills.js";
-import Contact from "./components/contact.js";
+import Contact from "./components/contact-us/index.js";
 import Navbar from "./components/navbar.js";
 import ScrollToTop from "./components/scrollToTop.js";
 import Footer from "./components/footer.js";
@@ -11,9 +11,9 @@ import Introduction from "./components/introduction.js";
 function App() {
   return (
     <div className="bg-cover bg-center bg-fixed"
-    style={{
-      backgroundImage: "url('./shubham-dhage-v0VjjYYFjOg-unsplash.jpg')", backgroundSize: 'auto'
-    }}
+      style={{
+        backgroundImage: "url('./shubham-dhage-v0VjjYYFjOg-unsplash.jpg')", backgroundSize: 'auto'
+      }}
     >
       <Navbar />
       <main>
