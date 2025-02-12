@@ -8,7 +8,9 @@ const ProjectComp = ({ index, project, expandedProject, toggleExpand }) => {
                 hover:md:scale-105 hover:bg-stone-900 transition-transform duration-300 group"
     >
       {project.url ?
-        <a href={project.url} target='_blank'>
+        <a href={project.url}
+          target='_blank'
+          rel="noreferrer">
           <h3 className="text-xl md:text-2xl font-serif font-semibold outline outline-1 outline-cyan-800 mb-4 
                   p-2 text-center group-hover:bg-cyan-800">
             {project.title}
