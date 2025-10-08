@@ -4,6 +4,13 @@ import ProjectList from "./project-comp";
 
 const projectList = [
   {
+    title: "Diversify",
+    url: "https://diversify-items.vercel.app/",
+    description:
+      "Developed and maintain a fully responsive data management platform for a refund portal named Diversify using React.js and Tailwind CSS. The application allows users to efficiently track products with complete CRUD functionality, ensuring seamless data handling. Deployed on Vercel for high performance, scalability, and reliability, with ongoing maintenance to deliver a smooth and optimized user experience.",
+    icon: "fas fa-database",
+  },
+  {
     title: "Michigan Care Angels",
     url: 'https://michigancareangels.com/',
     description:
