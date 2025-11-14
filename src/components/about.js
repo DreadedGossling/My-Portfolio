@@ -33,7 +33,7 @@ const About = () => (
               Proficient in modern frameworks like React.js, Vue.js, and Next.js, with a strong foundation in HTML, CSS, JavaScript, and TypeScript.
             </p>
             <div className="flex justify-start py-3 md:py-6">
-              <a href="/RaviKumarSharma_4years_frontend.pdf" download="Ravi Kumar Sharma's Resume"
+              <a href="/RaviKumarSharma_4years+_frontend.pdf" download="Ravi Kumar Sharma's Resume"
                 target="_blank">
                 <button className="p-2 md:p-3 text-white bg-cyan-800 hover:bg-cyan-900">Download Resume</button>
               </a>
